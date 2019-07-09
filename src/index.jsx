@@ -1,8 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import "normalize.css";
+import App from "./containers/App.jsx"
+import { store } from "./store/store";
+
 
 ReactDOM.render(
-    <h1>Hello, World!</h1>,
+    <Provider store={ store }>
+        <App />
+    </Provider>,
     document.getElementById("root")
 );

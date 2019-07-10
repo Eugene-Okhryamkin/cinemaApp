@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import "./main.sass";
+import {Route, Switch} from "react-router";
+import Serial from "../../components/serial/serial.jsx";
+import Film from "../../components/film/film.jsx";
+
 
 const Main = () => {
-    return(
+    return (
         <div id="Main">
-            <h1>Главная</h1>
+            <Switch>
+                <Route exact path={"/serial"} component={ Serial }/>
+                <Route exact path={"/film"} component={ Film }/>
+            </Switch>
         </div>
     );
 };

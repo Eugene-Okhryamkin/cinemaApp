@@ -4,14 +4,15 @@ import Sidebar from "./sidebar/sidebar.jsx";
 import Main from "./main/main.jsx";
 import "./App.sass";
 
+
 class App extends Component {
     render() {
-        return(
+        return (
             <>
-                <Sidebar />
+                <Sidebar/>
                 <Main />
             </>
-        )
+        );
     };
 };
 

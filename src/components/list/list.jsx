@@ -9,10 +9,10 @@ const List = () => {
         <div id="sidebar-list">
             <nav>
                 <ul>
-                    {/*<li><NavLink to="/">Главная</NavLink></li>*/}
+                    <li><NavLink to={"/"}>Главная</NavLink></li>
                     <li><NavLink to={"/film"}>Фильмы</NavLink></li>
                     <li><NavLink to={"/serial"}>Сериалы</NavLink></li>
-                    {/*<li><a href="#">Мультфильмы</a></li>*/}
+                    <li><NavLink to={"/mult"}>Мультфильмы</NavLink></li>
                 </ul>
             </nav>
         </div>

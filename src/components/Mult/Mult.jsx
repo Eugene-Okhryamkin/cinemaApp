@@ -1,5 +1,6 @@
 import React from "react";
 import FilmList from "../../containers/filmList/filmList.jsx";
+import "../page.sass";
 
 const Mult = () => (
     <div className="page">

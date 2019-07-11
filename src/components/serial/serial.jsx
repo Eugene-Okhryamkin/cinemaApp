@@ -1,5 +1,7 @@
 import React from "react";
 import FilmList from "../../containers/filmList/filmList.jsx";
+import "../page.sass";
+
 
 const Serial = () => (
     <div className="page">

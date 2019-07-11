@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.sass";
+import "../page.sass";
 import FilmList from "../../containers/filmList/filmList.jsx";
 
 const Home = () => (

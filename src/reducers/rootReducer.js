@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import { filmReducer } from "./filmReducer";
+import { cinemaReducer } from "./cinemaReducer";
 
 
 export const rootReducer = combineReducers({
-    film: filmReducer
+    cinema: cinemaReducer
 });

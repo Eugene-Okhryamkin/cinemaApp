@@ -1,0 +1,23 @@
+[
+  {
+    "filmName": "Бешенные псы",
+    "filmImg": "./build/Data/img/dogs.jpg",
+    "year": 1991,
+    "genre": "Боевик",
+    "type": "film"
+  },
+  {
+    "filmName": "Винни Пух",
+    "filmImg": "./build/Data/img/vinny.jpg",
+    "year": 1969,
+    "genre": "Мультфильм",
+    "type": "mult"
+  },
+  {
+    "filmName": "Ералаш",
+    "filmImg": "./build/Data/img/eralash.jpg",
+    "year": 1990,
+    "genre": "Комедия",
+    "type": "serial"
+  }
+]

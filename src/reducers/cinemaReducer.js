@@ -1,7 +1,7 @@
-import {GET_FILMS} from "../actions/cinemaAction";
+import { GET_FILMS } from "../actions/cinemaAction";
 
 const initState = {
-    films: null,
+    films: [],
     isFetching: false
 };
 
@@ -10,6 +10,7 @@ export const cinemaReducer = (state = initState, action) => {
 
         case GET_FILMS:
             return action.payload;
+            
 
         default:
             return state;

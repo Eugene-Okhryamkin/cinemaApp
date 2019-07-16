@@ -1,33 +1,20 @@
 import React, { Component } from "react";
 import FilmItem from "../../components/filmItem/filmItem.jsx";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import "./filmList.sass";
 
 class FilmList extends Component{
 
-    // filter = () => {
-    //     const {page} = this.props;
-    //
-    //     switch (page) {
-    //
-    //         case "Film":
-    //             return "Film"
-    //
-    //         default:
-    //             return "";
-    //     }
-    //
-    // };
-
     renderItems = () => {
-        const { films } = this.props.cinema;
+        const { cinema } = this.props;
         let template = null;
 
-        if(Array.isArray(films)) {
-            template = films.map((item, index) => {
-                if(this.props.page === item.type || this.props.page === "Home") {
-                    return <FilmItem key={index} item={item} />
-                }
+        if (Array.isArray(cinema)) {
+
+            template = cinema.map((item, index) => {
+                if (this.props.page === item.type || this.props.page == "Home") {
+                        return <FilmItem key={index} item={item} />;
+                    }
             });
         }
 
@@ -46,7 +33,10 @@ class FilmList extends Component{
 };
 
 const mapStateToProps = state => ({
-    cinema: state.cinema
+    search: state.search,
+    cinema: Array.isArray(state.cinema.films) ? state.cinema.films.filter(film => film.filmName.toLowerCase().includes(state.search.toLowerCase())) : null
 });
+
+
 
 export default connect(mapStateToProps)(FilmList);

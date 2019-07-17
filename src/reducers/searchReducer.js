@@ -1,4 +1,4 @@
-import { SEARCH } from "../actions/searchAction";
+import { SEARCH } from "../actions/searchAction.js";
 
 export const initState = "";
 

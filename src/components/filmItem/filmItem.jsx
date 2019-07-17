@@ -8,16 +8,16 @@ const FilmItem = props => {
 
     return(
         <div className="filmItem">
-            <img src={filmImg} alt={filmName}/>
+            <img src={ filmImg } alt={ filmName }/>
             <div className="filmOverlay">
                 <FontAwesomeIcon icon={ faPlayCircle }/>
             </div>
             <div className="filmName">
-                <p>{filmName}</p>
+                <p>{ filmName }</p>
             </div>
         </div>
     );
-}
+};
 
 
 export default FilmItem;

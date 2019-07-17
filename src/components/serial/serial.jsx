@@ -7,7 +7,6 @@ const Serial = () => (
     <div className="page">
         <h3>Сериалы</h3>
         <FilmList page="serial" />
-
     </div>
 );
 

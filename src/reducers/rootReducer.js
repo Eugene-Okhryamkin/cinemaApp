@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { cinemaReducer } from "./cinemaReducer";
-import { searchReducer } from "./searchReducer";
+import { cinemaReducer } from "./cinemaReducer.js";
+import { searchReducer } from "./searchReducer.js";
 
 
 export const rootReducer = combineReducers({

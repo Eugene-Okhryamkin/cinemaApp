@@ -1,4 +1,4 @@
-import { GET_FILMS } from "../actions/cinemaAction";
+import { GET_FILMS } from "../actions/cinemaAction.js";
 
 const initState = {
     films: [],

@@ -3,10 +3,12 @@
   position: relative
   cursor: pointer
   flex-direction: column
+  animation: 1s ease-in-out fade-in
   width: 170px
   height: auto
   margin:
     left: 2%
+
 
   &:hover
     .filmOverlay
@@ -15,7 +17,19 @@
     .filmName
       height: 25%
 
+@for $i from 1 through 50
+  .filmItem
+    &:nth-child(#{$i})
+      animation-delay: $i * (.003s)
 
+@keyframes fade-in
+  0%
+    opacity: 0
+    transform: scale(0)
+
+  100%
+    opacity: 1
+    transform: scale(1)
 
 img
   width: 100%

@@ -1,6 +1,6 @@
 import { SEARCH } from "../actions/searchAction.js";
 
-export const initState = "";
+const initState = "";
 
 
 export const searchReducer = (state = initState, action) => {

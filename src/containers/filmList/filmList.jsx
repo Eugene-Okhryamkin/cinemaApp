@@ -13,7 +13,7 @@ class FilmList extends Component{
 
             template = cinema.map((item, index) => {
                 if (this.props.page === item.type || this.props.page == "Home") {
-                        return <FilmItem key={index} item={item} />;
+                        return <FilmItem key={ index } item={ item } />;
                     }
             });
         }

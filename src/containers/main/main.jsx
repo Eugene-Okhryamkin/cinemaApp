@@ -8,6 +8,8 @@ import Mult from "../../components/mult/Mult.jsx";
 import { connect } from "react-redux";
 import { getFilms } from "../../actions/cinemaAction.js";
 import Preloader from "../../components/preloader/preloader.jsx";
+import PageFilm from "../pageFilm/pageFilm.jsx";
+import { selectFilm } from "../../actions/selectFilmAction.js";
 
 const data = "../../../../build/Data/cinema.json";
 
@@ -34,16 +36,22 @@ class Main extends Component {
 
     render() {
         const { isFetching } = this.props.cinema;
+        let { select } = this.props;
+
         return (
             <div id="Main">
                 {
                     isFetching ? <Preloader /> :
-                        <Switch>
-                            <Route exact path="/" component={ Home } />
-                            <Route exact path="/serial" component={ Serial } />
-                            <Route exact path="/film" component={ Film } />
-                            <Route exact path="/mult" component={ Mult } />
-                        </Switch>
+                        <div id="page">
+                            <Switch>
+                                <Route exact path="/" component={ Home } />
+                                <Route exact path="/serial" component={ Serial } />
+                                <Route exact path="/film" component={ Film } />
+                                <Route exact path="/mult" component={ Mult } />
+                            </Switch>
+                            { select != null  ? <PageFilm selected={ select } close={ () => this.props.pageFilm(null) } /> : null  }
+                        </div>
+
                 }
             </div>
         );
@@ -51,11 +59,13 @@ class Main extends Component {
 };
 
 const mapStateToProps = state => ({
-    cinema: state.cinema
+    cinema: state.cinema,
+    select: state.select,
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchingCinema: films => dispatch(getFilms(films))
+    fetchingCinema: films => dispatch(getFilms(films)),
+    pageFilm: select => dispatch(selectFilm(select))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
